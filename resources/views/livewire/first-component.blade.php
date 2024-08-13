@@ -1,7 +1,12 @@
 <div>
      <h1>This is live ware </h1>
 
-     <button wire:click="createNewTodo">Create New Todo</button>
+ <form action="">
+   <label for="">Type Your todo</label><br><br>
+   <input wire:model="todo_item" type="text"><br><br>
+   <button wire:click.prevent="createNewTodo">Create New Todo</button>
+ </form>
+
 
 <h2>This is all Todo</h2>
 

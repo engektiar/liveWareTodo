@@ -9,9 +9,10 @@ use Livewire\Component;
 class FirstComponent extends Component
 {
   
+    public $todo_item;
     public function createNewTodo(){
         Todo::create([
-            'todo_item'=>"Md Ektiar Hossen"
+            'todo_item'=>$this->todo_item 
         ]);
     }
  
