@@ -25,10 +25,9 @@
 
 <ul>
      @foreach ($alltodos as $todo )
-     
-     <li>{{$todo->todo_item}}</li>
-          
+     <li>{{$todo->todo_item}}</li> 
      @endforeach
+     {{$alltodos->links()}}
 </ul>
 </div>
 

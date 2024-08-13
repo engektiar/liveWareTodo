@@ -4,11 +4,12 @@ namespace App\Livewire;
 
 use App\Models\Todo;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 
 class FirstComponent extends Component
 {
-  
+    use WithPagination;
     public $todo_item;
     public function createNewTodo(){
         $this->validate([
@@ -25,7 +26,7 @@ class FirstComponent extends Component
  
     public function render()
     {
-        $alltodos=Todo::latest()->get();
+        $alltodos = Todo::latest()->paginate(5);
         return view('livewire.first-component',compact('alltodos'));
     }
 }
